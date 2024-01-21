@@ -1,0 +1,107 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { Icon } from 'astro-icon/components'; 
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <!--  <Header title={SITE_TITLE} /> -->
+    <main>
+      <section>
+        <h1 class="pt-8 font-bold">{SITE_TITLE}</h1>
+        <p>
+          {SITE_DESCRIPTION}
+        </p>
+
+				<ul class="flex flex-wrap gap-2">
+					<li>
+						<a href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						<a href="https://github.com/nmilic96" target="_blank" rel="noopener noreferrer">GitHub</a>
+					</li>
+				</ul>
+
+      </section>
+
+      <section>
+        <h2 class="text-4xl mb-4">Skills</h2>
+				
+        <ul class="flex flex-wrap gap-3">
+          <li>
+            <span>
+							Javascript (ES6+)</span>
+          </li>
+          <li>
+            <span>React.js</span>
+          </li>
+          <li>
+            <span>React Native</span>
+          </li>
+          <li>
+            <span>Ruby on Rails</span>
+          </li>
+          <li>
+            <span>HTML5</span>
+          </li>
+          <li>
+            <span>SASS / Tailwind CSS / styled-components</span>
+          </li>
+          <li>
+            <span>Shopify theme development</span>
+          </li>
+					<li>
+						<span>Git</span>
+					</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-4xl mb-4">Projects</h2>
+        <ul class="flex flex-wrap gap-3">
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener noreferrer"
+              >Nikola's Portfolio</a
+            >
+          </li>
+        </ul>
+      </section>
+
+			<section>
+				<h2>A bit more about me</h2>
+			</section>
+    </main>
+
+    <Footer />
+  </body>
+</html>

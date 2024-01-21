@@ -88,95 +88,139 @@ let text = "Hello!";
           <h2 class="text-4xl mb-4">Skills</h2>
 
           <ul class="grid grid-cols-4 auto-rows-fr gap-3">
-            <li class="card">
-              <Icon name="mdi:language-javascript" class="w-12 h-12" />
-              <span class="card__text">Javascript</span>
+            <li>
+              <InteractionWrapper client:load text="Moj omiljeni">
+                <div class="card">
+                  <Icon name="mdi:language-javascript" class="w-12 h-12" />
+                  <span class="card__text">Javascript</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:language-typescript" class="w-12 h-12" />
-              <span class="card__text">Typescript</span>
+            <li>
+              <InteractionWrapper client:load text="Javascript je bolji s typescriptom, zna se">
+                <div class="card">
+                  <Icon name="mdi:language-typescript" class="w-12 h-12" />
+                  <span class="card__text">Typescript</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:react" class="w-12 h-12" />
-              <span class="card__text">React.js</span>
+            <li>
+              <InteractionWrapper client:load text="Ova glava je zapravo React komponenta">
+                <div class="card">
+                  <Icon name="mdi:react" class="w-12 h-12" />
+                  <span class="card__text">React.js</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:react" class="w-12 h-12" />
-              <span class="card__text">React Native</span>
+            <li>
+              <InteractionWrapper client:load text="Odradio sam par aplikacija u React nativeu">
+                <div class="card">
+                  <Icon name="mdi:react" class="w-12 h-12" />
+                  <span class="card__text">React Native</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:language-ruby-on-rails" class="w-12 h-12" />
-              <span class="card__text">Ruby on Rails</span>
+            <li>
+              <InteractionWrapper client:load text="Znam i nešto malo backenda">
+                <div class="card">
+                  <Icon name="mdi:language-ruby-on-rails" class="w-12 h-12" />
+                  <span class="card__text">Ruby on Rails</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:language-html5" class="w-12 h-12" />
-              <span class="card__text">HTML5</span>
+            <li>
+              <InteractionWrapper client:load text="...">
+                <div class="card">
+                  <Icon name="mdi:language-html5" class="w-12 h-12" />
+                  <span class="card__text">HTML5</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:language-css3" class="w-12 h-12" />
-              <span class="card__text">CSS3</span>
+            <li>
+              <InteractionWrapper client:load text="Obožavam CSS (ozbiljno)">
+                <div class="card">
+                  <Icon name="mdi:language-css3" class="w-12 h-12" />
+                  <span class="card__text">CSS3</span>
+                </div>
+              </InteractionWrapper>
             </li>
-            <li class="card">
-              <Icon name="mdi:sass" class="w-12 h-12" />
-              <span class="card__text">Sass</span>
-              <li class="card">
-                <Icon name="mdi:tailwind" class="w-12 h-12" />
-                <span class="card__text">Tailwind CSS</span>
-              </li>
-              <li class="card">
-                <Icon name="shopify" class="w-12 h-12" />
-                <span class="card__text">Shopify</span>
-              </li>
-              <li class="card">
-                <Icon name="mdi:git" class="w-12 h-12" />
-                <span class="card__text">Git</span>
-              </li>
+            <li>
+              <InteractionWrapper client:load text="Obožavam CSS još više kad je SASS">
+                <div class="card">
+                  <Icon name="mdi:sass" class="w-12 h-12" />
+                  <span class="card__text">Sass</span>
+                </div>
+              </InteractionWrapper>
+            </li>
+            <li>
+              <InteractionWrapper client:load text="Tailwind mi je najbolji kad želim nešto stilizirati na brzinu">
+                <div class="card">
+                  <Icon name="mdi:tailwind" class="w-12 h-12" />
+                  <span class="card__text">Tailwind CSS</span>
+                </div>
+              </InteractionWrapper>
+            </li>
+            <li>
+              <InteractionWrapper client:load text="Shopify teme, aplikacije, sve može">
+                <div class="card">
+                  <Icon name="shopify" class="w-12 h-12" />
+                  <span class="card__text">Shopify</span>
+                </div>
+              </InteractionWrapper>
+            </li>
+            <li>
+              <InteractionWrapper client:load text="git commit . git push -f">
+                <div class="card">
+                  <Icon name="mdi:git" class="w-12 h-12" />
+                  <span class="card__text">Git</span>
+                </div>
+              </InteractionWrapper>
             </li>
           </ul>
+        </section>
 
-          <section>
-            <h2 class="text-4xl mb-4">Projects</h2>
-            <ul class="flex flex-wrap gap-3">
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-              <li>
-                <a href="#" target="_blank" rel="noopener noreferrer"
-                  >Nikola's Portfolio</a
-                >
-              </li>
-            </ul>
-          </section>
+        <section>
+          <h2 class="text-4xl mb-4">Projects</h2>
+          <ul class="flex flex-wrap gap-3">
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+            <li>
+              <a href="#" target="_blank" rel="noopener noreferrer"
+                >Nikola's Portfolio</a
+              >
+            </li>
+          </ul>
+        </section>
 
-          <section>
-            <h2 class="text-4xl mb-4">A bit more about me</h2>
-          </section>
+        <section>
+          <h2 class="text-4xl mb-4">A bit more about me</h2>
         </section>
       </main>
-
-      <Footer />
     </div>
+
+    <Footer />
   </body>
 </html>

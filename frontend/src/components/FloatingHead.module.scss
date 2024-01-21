@@ -1,6 +1,7 @@
 .floatingHead {
   padding: 1.5rem;
   transition: all 0.3s ease-in-out;
+  position: relative;
 
   img {
     height: 164px;
@@ -10,7 +11,11 @@
   }
 
   p {
-    @apply mt-2;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: auto;
   }
 }
 

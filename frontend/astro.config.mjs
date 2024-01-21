@@ -9,5 +9,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://nmilic96.github.io',
+  base: 'portfolio-new/frontend',
   integrations: [mdx(), sitemap(), tailwind(), icon(), react()]
 });

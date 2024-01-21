@@ -2,18 +2,20 @@ import React, { useEffect, useState } from "react";
 import head from "../assets/images/glava.png";
 import styles from "./FloatingHead.module.scss";
 import { reactions } from "..//consts";
+import { useStore } from "@nanostores/react";
+import { reaction } from "../stores/reactionStore";
 
 const FloatingHead = ({ text }: { text?: string }) => {
-  const [reaction, setReaction] = useState("");
+  const $reaction = useStore(reaction);
   const [isShaking, setIsShaking] = useState(false);
   const [clicks, setClicks] = useState(0);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
     if (clicks > 50) {
-      setReaction("Aj bok");
+      reaction.set("Aj bok");
       setTimeout(() => {
-        setReaction("");
+        reaction.set("")
         setClicks(0);
         setHidden(true);
       }, 1000);
@@ -38,7 +40,7 @@ const FloatingHead = ({ text }: { text?: string }) => {
 
     const randomReaction =
       reactions[Math.floor(Math.random() * reactions.length)];
-    setReaction(randomReaction);
+      reaction.set(randomReaction);
 
     // Clear the previous reaction timeout if it exists
     if (reactionTimeoutId) {
@@ -58,7 +60,7 @@ const FloatingHead = ({ text }: { text?: string }) => {
     // Set a new reaction timeout
     setReactionTimeoutId(
       setTimeout(() => {
-        setReaction("");
+        reaction.set("");
       }, 500)
     ); // Clears the reaction after 500 milliseconds
   };
@@ -72,7 +74,7 @@ const FloatingHead = ({ text }: { text?: string }) => {
         alt="head"
         className={isShaking ? styles.shake : ""}
       />
-      {reaction.length > 0 && <p>{reaction}</p>}
+      {$reaction.length > 0 && <p>{$reaction}</p>}
     </button>
   );
 };

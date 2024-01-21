@@ -7,6 +7,7 @@ import { Icon } from "astro-icon/components";
 import Particles from "astro-particles";
 import type { ISourceOptions } from "tsparticles-engine";
 import FloatingHead from "../components/FloatingHead.tsx";
+import InteractionWrapper from "../components/InteractionWrapper.tsx";
 
 const options: ISourceOptions = {
   background: {
@@ -24,6 +25,8 @@ const options: ISourceOptions = {
     },
   },
 };
+
+let text = "Hello!";
 ---
 
 <!doctype html>
@@ -35,40 +38,48 @@ const options: ISourceOptions = {
     <!--  <Header title={SITE_TITLE} /> -->
 
     <div class="container">
-
       <aside class="head-container">
-        <FloatingHead text="Hello!" client:load />
+        <FloatingHead text={text} client:load />
       </aside>
 
       <main>
         <section>
-          <h1 class="font-bold">{SITE_TITLE}</h1>
+          <InteractionWrapper client:load text="To sam ja">
+            <h1 class="font-bold">{SITE_TITLE}</h1>
+          </InteractionWrapper>
           <p>
             {SITE_DESCRIPTION}
           </p>
 
           <ul class="flex flex-wrap gap-4">
             <li>
-              <a
-                class="button"
-                href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon name="linkedin" class="w-6 h-6" />
-                LinkedIn
-              </a>
+              <InteractionWrapper client:load text="Javi se slobodno">
+                <a
+                  class="button"
+                  href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon name="linkedin" class="w-6 h-6" />
+                  LinkedIn
+                </a>
+              </InteractionWrapper>
             </li>
             <li>
-              <a
-                class="button"
-                href="https://github.com/nmilic96"
-                target="_blank"
-                rel="noopener noreferrer"
+              <InteractionWrapper
+                client:load
+                text="Pogledaj slobodno ali jedino pametno što ima je ovaj projekt"
               >
-                <Icon name="github" class="w-6 h-6" />
-                GitHub
-              </a>
+                <a
+                  class="button"
+                  href="https://github.com/nmilic96"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon name="github" class="w-6 h-6" />
+                  GitHub
+                </a>
+              </InteractionWrapper>
             </li>
           </ul>
         </section>

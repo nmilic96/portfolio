@@ -43,8 +43,7 @@ body {
 	line-height: 1.7;
 }
 main {
-	width: 720px;
-	max-width: calc(100% - 2em);
+	width: 100%;
 	margin: auto;
 	padding: 3em 1em;
 }
@@ -193,3 +192,22 @@ section {
 .button:hover {
 	border-color: var(--accent);
 }
+
+.container {
+	display: grid;
+	grid-template-columns: 3fr 9fr;
+	max-width: calc(100% - 2*4rem);
+}
+
+.head-container {
+	display: flex;
+	align-self: flex-start;
+	justify-content: flex-end;
+	position: sticky;
+	top: 0;
+	padding-top: calc(2*64px);
+	padding-bottom: calc(2*64px);
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+

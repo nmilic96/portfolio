@@ -8,6 +8,7 @@
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
 	--black: 15, 18, 25;
+	--white: 255, 255, 255;
 	--gray: 96, 115, 159;
 	--gray-light: 229, 233, 240;
 	--gray-dark: 34, 41, 57;
@@ -45,7 +46,6 @@ body {
 main {
 	width: 100%;
 	margin: auto;
-	padding: 3em 1em;
 }
 h1,
 h2,
@@ -127,10 +127,7 @@ hr {
 }
 @media (max-width: 720px) {
 	body {
-		font-size: 18px;
-	}
-	main {
-		padding: 1em;
+		font-size: 16px;
 	}
 }
 
@@ -153,8 +150,8 @@ hr {
 }
 
 section {
-	padding-top: 64px;
-	padding-bottom: 64px;
+	padding-top: 92px;
+	padding-bottom: 92px;
 }
 
 .link {
@@ -166,6 +163,7 @@ section {
 }
 
 .card {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -195,8 +193,15 @@ section {
 
 .container {
 	display: grid;
-	grid-template-columns: 3fr 9fr;
-	max-width: calc(100% - 2*4rem);
+	grid-template-columns: 2fr 10fr;
+	max-width: calc(100% - 2*1.5rem);
+	margin: 0 auto;
+
+
+
+	@media (max-width: 720px) {
+		grid-template-columns: 1fr;
+	}
 }
 
 .head-container {
@@ -209,5 +214,15 @@ section {
 	padding-bottom: calc(2*64px);
 	padding-left: 2rem;
 	padding-right: 2rem;
+
+	@media screen and (max-width: 640px) {
+    position: fixed;
+    bottom: 0;
+    top: auto;
+		left: 0;
+		padding: 24px;
+		width: 100%;
+		justify-content: flex-start;
+  }
 }
 

@@ -3,11 +3,24 @@
   transition: all 0.3s ease-in-out;
   position: relative;
 
+  @media screen and (max-width: 640px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
   img {
     height: 164px;
     width: 164px;
     object-fit: contain;
+    user-select: none;
     @apply transition-all duration-300 ease-in-out;
+
+    @media screen and (max-width: 640px) {
+      height: 100px;
+      width: 100px;
+    }
   }
 
   p {
@@ -16,6 +29,15 @@
     left: 0;
     right: 0;
     margin: auto;
+    pointer-events: none;
+
+    @media screen and (max-width: 640px) {
+      position: static;
+      padding: 0.625rem;
+      border: 1px solid var(--black);
+      background: var(--white);
+      text-align: left;
+    }
   }
 }
 
@@ -42,5 +64,5 @@
 }
 
 .isHidden {
-  transform: translateX(-100vw);
+  transform: translateX(-100vw) skewX(-10deg);
 }

@@ -1,7 +1,7 @@
 import { useStore } from "@nanostores/react";
 import { reaction } from "../stores/reactionStore";
 
-export default function InteractionWrapper(props: any) {
+export default function InteractionWrapper(props: { text: string, children: any, className?: string }) {
   
   const $reaction = useStore(reaction);
   const setReaction = (text: string) => {
@@ -9,7 +9,7 @@ export default function InteractionWrapper(props: any) {
   }
 
   return (
-    <div onMouseEnter={() => setReaction(props.text)} onMouseLeave={() => setReaction("")}>
+    <div className={props.className} onMouseEnter={() => setReaction(props.text)} onMouseLeave={() => setReaction("")}>
       {props.children}
     </div>
   );

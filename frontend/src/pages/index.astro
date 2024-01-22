@@ -1,32 +1,11 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, skills, projects } from "../consts";
 import { Icon } from "astro-icon/components";
-import Particles from "astro-particles";
-import type { ISourceOptions } from "tsparticles-engine";
 import FloatingHead from "../components/FloatingHead.tsx";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
-
-const options: ISourceOptions = {
-  background: {
-    color: "#000",
-  },
-  fullScreen: {
-    zIndex: -1,
-  },
-  particles: {
-    number: {
-      value: 100,
-    },
-    move: {
-      enable: true,
-    },
-  },
-};
-
-let text = "Hello!";
+import Card from "../components/Card.astro";
 ---
 
 <!doctype html>
@@ -39,7 +18,7 @@ let text = "Hello!";
 
     <div class="container">
       <aside class="head-container">
-        <FloatingHead text={text} client:load />
+        <FloatingHead text={""} client:load />
       </aside>
 
       <main>
@@ -87,131 +66,29 @@ let text = "Hello!";
         <section>
           <h2 class="text-4xl mb-4">Skills</h2>
 
-          <ul class="grid grid-cols-4 auto-rows-fr gap-3">
-            <li>
-              <InteractionWrapper client:load text="Moj omiljeni">
-                <div class="card">
-                  <Icon name="mdi:language-javascript" class="w-12 h-12" />
-                  <span class="card__text">Javascript</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Javascript je bolji s typescriptom, zna se">
-                <div class="card">
-                  <Icon name="mdi:language-typescript" class="w-12 h-12" />
-                  <span class="card__text">Typescript</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Ova glava je zapravo React komponenta">
-                <div class="card">
-                  <Icon name="mdi:react" class="w-12 h-12" />
-                  <span class="card__text">React.js</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Odradio sam par aplikacija u React nativeu">
-                <div class="card">
-                  <Icon name="mdi:react" class="w-12 h-12" />
-                  <span class="card__text">React Native</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Znam i nešto malo backenda">
-                <div class="card">
-                  <Icon name="mdi:language-ruby-on-rails" class="w-12 h-12" />
-                  <span class="card__text">Ruby on Rails</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="...">
-                <div class="card">
-                  <Icon name="mdi:language-html5" class="w-12 h-12" />
-                  <span class="card__text">HTML5</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Obožavam CSS (ozbiljno)">
-                <div class="card">
-                  <Icon name="mdi:language-css3" class="w-12 h-12" />
-                  <span class="card__text">CSS3</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Obožavam CSS još više kad je SASS">
-                <div class="card">
-                  <Icon name="mdi:sass" class="w-12 h-12" />
-                  <span class="card__text">Sass</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Tailwind mi je najbolji kad želim nešto stilizirati na brzinu">
-                <div class="card">
-                  <Icon name="mdi:tailwind" class="w-12 h-12" />
-                  <span class="card__text">Tailwind CSS</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="Shopify teme, aplikacije, sve može">
-                <div class="card">
-                  <Icon name="shopify" class="w-12 h-12" />
-                  <span class="card__text">Shopify</span>
-                </div>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper client:load text="git commit . git push -f">
-                <div class="card">
-                  <Icon name="mdi:git" class="w-12 h-12" />
-                  <span class="card__text">Git</span>
-                </div>
-              </InteractionWrapper>
-            </li>
+          <ul class="grid grid-cols-1 auto-rows-fr gap-3 md:grid-cols-2 lg:grid-cols-4">
+						{skills.map(skill => (
+							<li>
+								<InteractionWrapper className="h-full w-full" client:load text={skill.description}>
+									<Card icon={skill.icon} text={skill.name} />
+								</InteractionWrapper>
+							</li>
+						))}
           </ul>
+
         </section>
 
         <section>
           <h2 class="text-4xl mb-4">Projects</h2>
           <ul class="flex flex-wrap gap-3">
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
-            <li>
-              <a href="#" target="_blank" rel="noopener noreferrer"
-                >Nikola's Portfolio</a
-              >
-            </li>
+						{projects.map(project => (
+							<li>
+								<a href={project.url} target="_blank" rel="noopener noreferrer">
+									<Card text={project.name} />
+								</a>
+							</li>
+							))	
+						}
           </ul>
         </section>
 

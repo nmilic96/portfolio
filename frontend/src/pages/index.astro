@@ -6,6 +6,7 @@ import { Icon } from "astro-icon/components";
 import FloatingHead from "../components/FloatingHead.tsx";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
 import Card from "../components/Card.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <!doctype html>
@@ -16,17 +17,17 @@ import Card from "../components/Card.astro";
   <body>
     <!--  <Header title={SITE_TITLE} /> -->
 
-    <div class="container">
+    <div class="page-container">
       <aside class="head-container">
         <FloatingHead text={""} client:load />
       </aside>
 
       <main>
-        <section>
+        <section class="min-h-screen flex flex-col justify-center">
           <InteractionWrapper client:load text="To sam ja">
             <h1 class="font-bold">{SITE_TITLE}</h1>
           </InteractionWrapper>
-          <p>
+          <p class="text-2xl">
             {SITE_DESCRIPTION}
           </p>
 
@@ -64,7 +65,7 @@ import Card from "../components/Card.astro";
         </section>
 
         <section>
-          <h2 class="text-4xl mb-4">Skills</h2>
+          <h2 class="text-5xl mb-10 font-semibold">Skills</h2>
 
           <ul class="grid grid-cols-1 auto-rows-fr gap-3 md:grid-cols-2 lg:grid-cols-4">
 						{skills.map(skill => (
@@ -79,13 +80,11 @@ import Card from "../components/Card.astro";
         </section>
 
         <section>
-          <h2 class="text-4xl mb-4">Projects</h2>
-          <ul class="flex flex-wrap gap-3">
+          <h2 class="text-5xl mb-10 font-semibold">Projekti</h2>
+          <ul class="grid grid-cols-1 gap-12">
 						{projects.map(project => (
 							<li>
-								<a href={project.url} target="_blank" rel="noopener noreferrer">
-									<Card text={project.name} />
-								</a>
+								<ProjectCard title={project.name} description={project.description} imagePath={project.image ? `/src/assets/images/${project.image}` : null} url={project.url} />
 							</li>
 							))	
 						}

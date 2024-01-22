@@ -9,7 +9,9 @@ interface Skill {
 
 interface Project {
   name: string;
+	description?: string;
   url: string;
+	image?: string;
 }
 
 export const SITE_TITLE: string = 'Nikola Milić';
@@ -76,19 +78,27 @@ export const skills: Skill[] = [
 export const projects: Project[] = [
 	{
 		name: "Magnify",
-		url: "https://magnify-co.com/"
+		url: "https://magnify-co.com/",
+		image: "magnify.jpg",
+		description: "Hospitality mystery shopping platform"
 	},
 	{
 		name: "Novi Informator",
-		url: "https://informator.hr/"
+		url: "https://informator.hr/",
+		image: "informator.jpg",
+		description: "Pravni portal"
 	},
 	{
 		name: "CIM Repo",
-		url: "https://base58.hr/en/products/cim-repo"
+		url: "https://base58.hr/en/products/cim-repo",
+		image: "cimrepo.jpg",
+		description: "Github za trafo stanice"
 	},
 	{
 		name: "Hrvatske Ceste",
-		url: "https://hrvatske-ceste.hr/"
+		url: "https://hrvatske-ceste.hr/",
+		image: "hrvatske_ceste.jpg",
+		description: "Službeni web portal Hrvatskih Cesta"
 	},
 	{
 		name: "Convoworks",
@@ -141,3 +151,5 @@ export const reactions: string[] = [
   "Proklet bio",
   "Aj još jednom",
 ];
+
+

@@ -102,31 +102,45 @@ export const projects: Project[] = [
 	},
 	{
 		name: "Convoworks",
-		url: "https://convoworks.com/"
+		url: "https://convoworks.com/",
+		image: "convoworks.jpg",
+		description: "Nisam siguran tbh"
 	},
 	{
 		name: "Country Archer",
-		url: "https://www.countryarcher.com/"
+		url: "https://www.countryarcher.com/",
+		image: "countryarcher.jpg",
+		description: "Beef jerky webshop"
 	},
 	{
 		name: "Tržnica Osijek",
-		url: "https://trznicaos.hr/"
+		url: "https://trznicaos.hr/",
+		image: "trznicaos.jpg",
+		description: "Službeni web portal Tržnice Osijek"
 	},
 	{
 		name: "Astrogarden",
-		url: "https://astrogarden.fun/"
+		url: "https://astrogarden.fun/",
+		image: "astrogarden.jpg",
+		description: "Web stranica osječke igraonice"
 	},
 	{
 		name: "Centar za mir Osijek",
-		url: "https://centar-za-mir.hr/"
+		url: "https://centar-za-mir.hr/",
+		image: "centarzamir.jpg",
+		description: "Službeni stranica Centra za mir Osijek"
 	},
 	{
 		name: "Rezerviraj.me",
-		url: "https://rezerviraj.me/"
+		url: "https://rezerviraj.me/",
+		image: "rezervirajme.jpg",
+		description: "Web stranica za rezervaciju termina u salonima, na sportskim terenima i slično"
 	},
 	{
 		name: "Portanova",
-		url: "https://portanova.hr/"
+		url: "https://portanova.hr/",
+		image: "portanova.jpg",
+		description: "Web stranica trgovačkog cetra Portanova u Osijeku"
 	}
 ]
 

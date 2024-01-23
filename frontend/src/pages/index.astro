@@ -7,6 +7,11 @@ import FloatingHead from "../components/FloatingHead.tsx";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
 import Card from "../components/Card.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+
+// get years from may 2018 to now (rounded up)
+const yearsOfExperience = Math.ceil(
+  (new Date().getTime() - new Date(2018, 4, 1).getTime()) / 1000 / 60 / 60 / 24 / 365
+);
 ---
 
 <!doctype html>
@@ -92,7 +97,12 @@ import ProjectCard from "../components/ProjectCard.astro";
         </section>
 
         <section>
-          <h2 class="text-4xl mb-4">A bit more about me</h2>
+          <h2 class="text-5xl mb-10 font-semibold">Nešto više od meni</h2>
+          <article>
+            <p>
+              Frontend developer s <strong class="text-accent">{yearsOfExperience}</strong> godina iskustva.
+            </p>
+          </article>
         </section>
       </main>
     </div>

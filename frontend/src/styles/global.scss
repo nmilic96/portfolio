@@ -161,7 +161,7 @@ section {
 	padding-top: calc(80/1024*100vh);
 	padding-bottom: calc(80/1024*100vh);
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		padding-top: calc(64/1024*100vh);
 		padding-bottom: calc(64/1024*100vh);
 	}
@@ -170,7 +170,7 @@ section {
 .hero-section {
 	min-height: 100vh;
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		min-height: 70vh;
 	}
 }
@@ -231,15 +231,15 @@ section {
 	padding: 0 1.5rem;
 	padding-bottom: 6.25rem;
 
-	@media screen and (max-width: 1536px) {
+	@media screen and (max-width: 1535px) {
 		grid-template-columns: 12.25rem auto 12.25rem;
 	}
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1279px) {
 		grid-template-columns: 9.375rem auto 9.375rem;
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		display: block;
 		padding: 0 1.5rem;
 		gap: 0;
@@ -255,12 +255,12 @@ section {
 	border-radius: 50%;
 	object-fit: contain;
 
-	@media screen and (max-width: 1280px) {
+	@media screen and (max-width: 1279px) {
 		width: 14rem;
 		height: 14rem;
 	}
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		width: 14rem;
 		height: 14rem;
 	}
@@ -282,7 +282,7 @@ section {
 	padding-bottom: calc(80/1024*100vh);
 
 
-	@media screen and (max-width: 1024px) {
+	@media screen and (max-width: 1023px) {
 		display: block;
 		position: fixed;
 		top: auto;
@@ -299,7 +299,7 @@ section {
 		transform: scale(0);
 		transform-origin: center;
 
-		@media screen and (max-width: 1024px) {
+		@media screen and (max-width: 1023px) {
 			transform-origin: 10% center;
 			
 		}

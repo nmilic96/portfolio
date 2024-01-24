@@ -7,7 +7,7 @@
   position: relative;
   user-select: none;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -25,7 +25,7 @@
     border-radius: 50%;
     @apply bg-secondary transition-all duration-300 ease-in-out;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 0.625rem;
       width: 6.25rem;
       min-width: 6.25rem;
@@ -45,7 +45,7 @@
   font-size: 0.875rem;
   font-weight: 500;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     position: static;
     padding: 0.625rem 0.75rem;
     border: 1px solid var(--black);

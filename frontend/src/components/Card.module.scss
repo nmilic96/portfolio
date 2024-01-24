@@ -1,0 +1,20 @@
+.card {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  background-color: var(--white);
+	@apply gap-2 rounded-md border border-gray-200 p-4 transition-all duration-200 ease-in-out;
+}
+
+.card:hover {
+	border-color: var(--secondary);
+  color: var(--primary);
+  box-shadow: 4px 4px 0px var(--secondary);
+}
+
+.text {
+	text-align: center;
+	@apply font-medium text-lg;
+}

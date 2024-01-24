@@ -1,5 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
+import styles from "./Card.module.scss";
 
 interface Props {
   icon?: string;
@@ -9,7 +10,7 @@ interface Props {
 const { icon, text = "Card" } = Astro.props;
 ---
 
-<div class="card">
+<div class={styles.card}>
   {icon && <Icon name={icon} class="w-12 h-12" />}
-  <span class="card__text">{text}</span>
+  <span class={styles.text}>{text}</span>
 </div>

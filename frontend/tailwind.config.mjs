@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
-	theme: {	
+	theme: {
 		screens: {
 			'sm': '640px',
 			// => @media (min-width: 640px) { ... }
@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			colors: {
-				accent: '#2337ff',
-			},
+				primary: '#064789',
+				secondary: '#F87060',
+			}
 		},
 	},
 	plugins: [],

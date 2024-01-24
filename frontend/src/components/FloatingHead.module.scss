@@ -1,25 +1,27 @@
 .floatingHead {
   transition: all 0.3s ease-in-out;
   position: relative;
+  padding: 0.625rem;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  @apply bg-gray-200;
 
   @media screen and (max-width: 640px) {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 1rem;
+    width: 15rem;
+    height: 15rem;
   }
 
   img {
-    height: 256px;
-    width: 256px;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     user-select: none;
-    @apply transition-all duration-300 ease-in-out;
-
-    @media screen and (max-width: 640px) {
-      height: 100px;
-      width: 100px;
-    }
+    @apply transition-all duration-300 ease-in-out filter drop-shadow-lg;
   }
 
   p {
@@ -29,12 +31,14 @@
     right: 0;
     margin: auto;
     pointer-events: none;
+    margin-top: calc(14/1024*100vh);
+    font-size: 0.875rem;
 
     @media screen and (max-width: 640px) {
       position: static;
       padding: 0.625rem;
       border: 1px solid var(--black);
-      background: var(--white);
+      background: #FAFAFC;
       text-align: left;
     }
   }

@@ -1,18 +1,29 @@
 .projectCard {
-  display: flex;
+  height: 100%;
   color: rgb(var(--black));
-  @apply gap-8;
-
-  img {
-    max-width: 280px;
-  }
+  @apply flex flex-col gap-2 p-4 pr-8 border border-gray-200 rounded-md md:flex-row md:gap-8 transition-all ease-in-out duration-300;
 
   &:hover {
-    color: rgb(var(--black));
+    border-color: var(--secondary);
+    color: var(--primary);
+    box-shadow: 6px 6px 0px var(--secondary);
+
+    * {
+      color: var(--primary);
+    }
+
     .icon {
       opacity: 1;
       transform: translateX(0);
     }
+  }
+
+  img {
+    width: 100%;
+    max-width: 214px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    @apply shadow-sm;
   }
 }
 

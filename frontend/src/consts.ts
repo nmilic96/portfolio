@@ -15,7 +15,7 @@ interface Project {
 }
 
 export const SITE_TITLE: string = 'Nikola Milić';
-export const SITE_DESCRIPTION: string = 'Frontend web developer based in Đakovo, Croatia.';
+export const SITE_DESCRIPTION: string = 'Frontend web developer iz Đakova.';
 
 export const skills: Skill[] = [
 	{

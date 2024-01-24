@@ -4,13 +4,21 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION, skills, projects } from "../consts";
 import { Icon } from "astro-icon/components";
 import FloatingHead from "../components/FloatingHead.tsx";
+import Navigation from "../components/Navigation.astro";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
 import Card from "../components/Card.astro";
 import ProjectCard from "../components/ProjectCard.astro";
+import head from "../assets/images/glava.png";
+import { Image } from "astro:assets";
 
 // get years from may 2018 to now (rounded up)
 const yearsOfExperience = Math.ceil(
-  (new Date().getTime() - new Date(2018, 4, 1).getTime()) / 1000 / 60 / 60 / 24 / 365
+  (new Date().getTime() - new Date(2018, 4, 1).getTime()) /
+    1000 /
+    60 /
+    60 /
+    24 /
+    365
 );
 ---
 
@@ -20,93 +28,119 @@ const yearsOfExperience = Math.ceil(
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
   <body>
-    <!--  <Header title={SITE_TITLE} /> -->
-
     <div class="page-container">
-      <aside class="head-container">
+      <div class="head-container" data-sal="zoom-in" data-sal-repeat="true">
         <FloatingHead text={""} client:load />
-      </aside>
+      </div>
 
-      <main>
-        <section class="min-h-screen flex flex-col justify-center">
-          <InteractionWrapper client:load text="To sam ja">
-            <h1 class="font-bold">{SITE_TITLE}</h1>
-          </InteractionWrapper>
-          <p class="text-2xl">
-            {SITE_DESCRIPTION}
-          </p>
+      <main class="max-w-screen-lg">
+        <section
+          id="hero-section"
+          class="lg:min-h-screen flex flex-col justify-center"
+        >
+          <div class="flex items-center gap-12">
+            <Image
+              src={head}
+              alt="Nikola Milić"
+              class="static-head"
+              id="static-image"
+            />
+            <div>
+              <h1 class="font-bold text-7xl mb-2" data-sal="slide-left" data-sal-delay="300">{SITE_TITLE}</h1>
+              <article class="mt-4 max-w-lg" data-sal="slide-left" data-sal-delay="500">
+                <p>
+                  Frontend developer iz Đakova. {yearsOfExperience} godina iskustva.
+                </p>
+              </article>
+              <ul class="flex flex-wrap gap-4">
+                <li data-sal="slide-up" data-sal-delay="700">
+                  <a
+                    class="button"
+                    href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="linkedin" class="w-6 h-6" />
+                    LinkedIn
+                  </a>
+                </li>
+                <li data-sal="slide-up" data-sal-delay="900">
+                  <a
+                    class="button"
+                    href="https://github.com/nmilic96"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="github" class="w-6 h-6" />
+                    GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-          <ul class="flex flex-wrap gap-4">
-            <li>
-              <InteractionWrapper client:load text="Javi se slobodno">
-                <a
-                  class="button"
-                  href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name="linkedin" class="w-6 h-6" />
-                  LinkedIn
-                </a>
-              </InteractionWrapper>
-            </li>
-            <li>
-              <InteractionWrapper
-                client:load
-                text="Pogledaj slobodno ali jedino pametno što ima je ovaj projekt"
-              >
-                <a
-                  class="button"
-                  href="https://github.com/nmilic96"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name="github" class="w-6 h-6" />
-                  GitHub
-                </a>
-              </InteractionWrapper>
-            </li>
+        <section id="section-skills">
+          <h2 class="section-heading text-5xl mb-12 font-semibold" data-sal="slide-left">
+            Skilovi <Icon name="lines" class="w-14 text-secondary" />
+          </h2>
+          <ul
+            class="grid grid-cols-1 auto-rows-fr gap-3 md:grid-cols-2 lg:grid-cols-4"
+          >
+            {
+              skills.map((skill, index) => (
+                <li data-sal="zoom-in" data-sal-delay={index * 100}>
+                  <InteractionWrapper
+                    className="h-full w-full"
+                    client:load
+                    text={skill.description}>
+                    <Card icon={skill.icon} text={skill.name} />
+                  </InteractionWrapper>
+                </li>
+              ))
+            }
           </ul>
         </section>
 
-        <section>
-          <h2 class="text-5xl mb-10 font-semibold">Skills</h2>
-
-          <ul class="grid grid-cols-1 auto-rows-fr gap-3 md:grid-cols-2 lg:grid-cols-4">
-						{skills.map(skill => (
-							<li>
-								<InteractionWrapper className="h-full w-full" client:load text={skill.description}>
-									<Card icon={skill.icon} text={skill.name} />
-								</InteractionWrapper>
-							</li>
-						))}
+        <section id="section-projects">
+          <h2 class="section-heading text-5xl mb-12 font-semibold" data-sal="slide-left">
+            Projekti <Icon name="lines-3" class="w-14 text-secondary" />
+          </h2>
+          <ul class="py-8 grid grid-cols-1 gap-2 projects lg:gap-4">
+            {
+              projects.map(project => (
+                <li data-sal="fade">
+                  <ProjectCard
+                    title={project.name}
+                    description={project.description}
+                    imagePath={
+                      project.image
+                        ? `/src/assets/images/${project.image}`
+                        : null
+                    }
+                    url={project.url}
+                  />
+                </li>
+              ))
+            }
           </ul>
-
-        </section>
-
-        <section>
-          <h2 class="text-5xl mb-10 font-semibold">Projekti</h2>
-          <ul class="grid grid-cols-1 gap-12">
-						{projects.map(project => (
-							<li>
-								<ProjectCard title={project.name} description={project.description} imagePath={project.image ? `/src/assets/images/${project.image}` : null} url={project.url} />
-							</li>
-							))	
-						}
-          </ul>
-        </section>
-
-        <section>
-          <h2 class="text-5xl mb-10 font-semibold">Nešto više od meni</h2>
-          <article>
-            <p>
-              Frontend developer s <strong class="text-accent">{yearsOfExperience}</strong> godina iskustva.
-            </p>
-          </article>
         </section>
       </main>
+
+      <div></div>
     </div>
 
-    <Footer />
+    <script>
+      import sal from "sal.js";
+      import 'sal.js/dist/sal.css';
+
+      import handleScroll from "../javascript/handleScroll.js";
+
+      handleScroll();
+      sal({
+        root: null,
+        once: true
+      });
+    </script>
   </body>
 </html>

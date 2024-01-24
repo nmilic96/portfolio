@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import head from "../assets/images/glava.png";
 import styles from "./FloatingHead.module.scss";
 import { reactions } from "..//consts";
@@ -15,7 +15,7 @@ const FloatingHead = ({ text }: { text?: string }) => {
     if (clicks > 50) {
       reaction.set("Aj bok");
       setTimeout(() => {
-        reaction.set("")
+        reaction.set("");
         setClicks(0);
         setHidden(true);
       }, 1000);
@@ -30,7 +30,8 @@ const FloatingHead = ({ text }: { text?: string }) => {
     }
   }, [hidden]);
 
-  const [reactionTimeoutId, setReactionTimeoutId] = useState<NodeJS.Timeout | null>(null);
+  const [reactionTimeoutId, setReactionTimeoutId] =
+    useState<NodeJS.Timeout | null>(null);
   const [shakeTimeoutId, setShakeTimeoutId] = useState<NodeJS.Timeout | null>(
     null
   );
@@ -40,7 +41,7 @@ const FloatingHead = ({ text }: { text?: string }) => {
 
     const randomReaction =
       reactions[Math.floor(Math.random() * reactions.length)];
-      reaction.set(randomReaction);
+    reaction.set(randomReaction);
 
     // Clear the previous reaction timeout if it exists
     if (reactionTimeoutId) {

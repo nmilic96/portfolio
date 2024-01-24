@@ -1,5 +1,5 @@
 .wrapper {
-  @apply flex items-center lg:flex-col w-full text-center gap-2 relative;
+  @apply flex items-center lg:flex-col w-full text-center gap-2 relative transition-all duration-300 ease-in-out;
 }
 
 .floatingHead {

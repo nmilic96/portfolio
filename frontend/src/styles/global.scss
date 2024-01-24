@@ -295,8 +295,14 @@ section {
 		z-index: 1;
 	}
 
-	button {
+	.head-wrapper {
 		transform: scale(0);
+		transform-origin: center;
+
+		@media screen and (max-width: 1024px) {
+			transform-origin: 10% center;
+			
+		}
 	}
 }
 
@@ -309,7 +315,7 @@ section {
 		transform: scale(0);
 	}
 
-	.head-container button {
+	.head-container .head-wrapper {
 		transform: scale(1);
 	}
 }

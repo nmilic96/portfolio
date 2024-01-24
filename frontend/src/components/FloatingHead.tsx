@@ -67,10 +67,10 @@ const FloatingHead = ({ text }: { text?: string }) => {
   };
 
   return (
-    <div className={styles.wrapper}>
+    <div className={`head-wrapper ${styles.wrapper} ${hidden ? styles.isHidden : ""}`}>
       <button
         onClick={handleClick}
-        className={`${styles.floatingHead} ${hidden ? styles.isHidden : ""}`}>
+        className={`${styles.floatingHead}`}>
         <img
           src={head.src}
           alt="head"

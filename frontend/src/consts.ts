@@ -40,6 +40,11 @@ export const skills: Skill[] = [
 		description: "Odradio sam par aplikacija u React nativeu"
 	},
 	{
+		name: "Astro",
+		icon: "astro",
+		description: "Ovaj web je napravljen u Astro-u"
+	},
+	{
 		name: "Ruby on Rails",
 		icon: "mdi:language-ruby-on-rails",
 		description: "Znam i nešto malo backenda"

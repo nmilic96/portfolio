@@ -163,9 +163,17 @@ section {
 	padding-top: calc(80/1024*100vh);
 	padding-bottom: calc(80/1024*100vh);
 
-	@media screen and (max-width: 640px) {
+	@media screen and (max-width: 1024px) {
 		padding-top: calc(64/1024*100vh);
 		padding-bottom: calc(64/1024*100vh);
+	}
+}
+
+.hero-section {
+	min-height: 100vh;
+
+	@media screen and (max-width: 1024px) {
+		min-height: 70vh;
 	}
 }
 
@@ -220,7 +228,7 @@ section {
 		grid-template-columns: 150px auto 150px;
 	}
 
-	@media screen and (max-width: 640px) {
+	@media screen and (max-width: 1024px) {
 		display: block;
 		padding: 0 1.5rem;
 		gap: 0;
@@ -235,6 +243,11 @@ section {
 	padding: 1.5rem;
 	border-radius: 50%;
 	object-fit: contain;
+
+	@media screen and (max-width: 1280px) {
+		width: 14rem;
+		height: 14rem;
+	}
 
 	@media screen and (max-width: 1024px) {
 		width: 14rem;
@@ -252,13 +265,27 @@ section {
 	left: 0;
 	top: 0;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 
-	@media screen and (max-width: 640px) {
+	padding-top: calc(80/1024*100vh);
+	padding-bottom: calc(80/1024*100vh);
+
+
+	@media screen and (max-width: 1024px) {
+		display: block;
 		position: fixed;
+		top: auto;
+		bottom: 0;
+		left: 0;
 		height: auto;
 		width: 100%;
-		padding-top: calc(80/1024*100vh);
+		padding: 1.5rem;
+		margin: 0;
+		z-index: 1;
+	}
+
+	button {
+		transform: scale(0);
 	}
 }
 
@@ -269,5 +296,9 @@ section {
 .hero-not-in-view {
 	.static-head {
 		transform: scale(0);
+	}
+
+	.head-container button {
+		transform: scale(1);
 	}
 }

@@ -29,14 +29,14 @@ const yearsOfExperience = Math.ceil(
   </head>
   <body>
     <div class="page-container">
-      <div class="head-container" data-sal="zoom-in" data-sal-repeat="true">
+      <div class="head-container">
         <FloatingHead text={""} client:load />
       </div>
 
       <main class="max-w-screen-lg">
         <section
           id="hero-section"
-          class="lg:min-h-screen flex flex-col justify-center"
+          class="hero-section flex flex-col justify-center"
         >
           <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
             <Image
@@ -47,7 +47,7 @@ const yearsOfExperience = Math.ceil(
             />
             <div>
               <h1
-                class="font-bold text-7xl mb-2"
+                class="font-bold text-6xl lg:text-6xl xl:text-7xl mb-2"
                 data-sal="slide-left"
                 data-sal-delay="300"
               >
@@ -92,17 +92,17 @@ const yearsOfExperience = Math.ceil(
 
         <section id="section-skills">
           <h2
-            class="section-heading text-5xl mb-12 font-semibold"
+            class="section-heading text-4xl lg:text-5xl mb-12 font-semibold"
             data-sal="slide-left"
           >
             Skilovi <Icon name="lines" class="w-14 text-secondary" />
           </h2>
           <ul
-            class="grid grid-cols-1 auto-rows-fr gap-3 md:grid-cols-2 lg:grid-cols-4"
+            class="grid grid-cols-2 auto-rows-fr gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
             {
               skills.map((skill, index) => (
-                <li data-sal="zoom-in" data-sal-delay={index * 100}>
+                <li data-sal="zoom-in" data-sal-delay={index * 50}>
                   <InteractionWrapper
                     className="h-full w-full"
                     client:load
@@ -117,7 +117,7 @@ const yearsOfExperience = Math.ceil(
 
         <section id="section-projects">
           <h2
-            class="section-heading text-5xl mb-12 font-semibold"
+            class="section-heading text-4xl lg:text-5xl mb-12 font-semibold"
             data-sal="slide-left"
           >
             Projekti <Icon name="lines-3" class="w-14 text-secondary" />

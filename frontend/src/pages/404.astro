@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import ApplicationLayout from "../layouts/ApplicationLayout.astro";
+import { Icon } from "astro-icon/components";
+---
+<ApplicationLayout>
+  <main class="main max-w-screen-lg m-auto h-full">
+    <div class="flex flex-col items-center justify-center h-full">
+      <h1 class="font-bold mb-0">404</h1>
+      <Icon name="lines-3" class="text-secondary h-2 mb-8" />
+      <p>Nema vam tu drugih pageva, samo <a href="/" class="link">home</a></p>
+    </div>
+  </main>
+</ApplicationLayout>

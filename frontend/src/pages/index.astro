@@ -38,7 +38,7 @@ const yearsOfExperience = Math.ceil(
           id="hero-section"
           class="lg:min-h-screen flex flex-col justify-center"
         >
-          <div class="flex items-center gap-12">
+          <div class="flex flex-col gap-12 lg:flex-row lg:items-center">
             <Image
               src={head}
               alt="Nikola Milić"
@@ -46,8 +46,18 @@ const yearsOfExperience = Math.ceil(
               id="static-image"
             />
             <div>
-              <h1 class="font-bold text-7xl mb-2" data-sal="slide-left" data-sal-delay="300">{SITE_TITLE}</h1>
-              <article class="mt-4 max-w-lg" data-sal="slide-left" data-sal-delay="500">
+              <h1
+                class="font-bold text-7xl mb-2"
+                data-sal="slide-left"
+                data-sal-delay="300"
+              >
+                {SITE_TITLE}
+              </h1>
+              <article
+                class="mt-4 max-w-lg"
+                data-sal="slide-left"
+                data-sal-delay="500"
+              >
                 <p>
                   Frontend developer iz Đakova. {yearsOfExperience} godina iskustva.
                 </p>
@@ -81,7 +91,10 @@ const yearsOfExperience = Math.ceil(
         </section>
 
         <section id="section-skills">
-          <h2 class="section-heading text-5xl mb-12 font-semibold" data-sal="slide-left">
+          <h2
+            class="section-heading text-5xl mb-12 font-semibold"
+            data-sal="slide-left"
+          >
             Skilovi <Icon name="lines" class="w-14 text-secondary" />
           </h2>
           <ul
@@ -103,23 +116,32 @@ const yearsOfExperience = Math.ceil(
         </section>
 
         <section id="section-projects">
-          <h2 class="section-heading text-5xl mb-12 font-semibold" data-sal="slide-left">
+          <h2
+            class="section-heading text-5xl mb-12 font-semibold"
+            data-sal="slide-left"
+          >
             Projekti <Icon name="lines-3" class="w-14 text-secondary" />
           </h2>
           <ul class="py-8 grid grid-cols-1 gap-2 projects lg:gap-4">
             {
               projects.map(project => (
                 <li data-sal="fade">
-                  <ProjectCard
-                    title={project.name}
-                    description={project.description}
-                    imagePath={
-                      project.image
-                        ? `/src/assets/images/${project.image}`
-                        : null
-                    }
-                    url={project.url}
-                  />
+                  <InteractionWrapper
+                    className="h-full w-full"
+                    client:load
+                    text={project.tooltip ? project.tooltip : ""}>
+                    <ProjectCard
+                      title={project.name}
+                      tooltip={project.tooltip ? project.tooltip : ""}
+                      description={project.description}
+                      imagePath={
+                        project.image
+                          ? `/src/assets/images/${project.image}`
+                          : null
+                      }
+                      url={project.url}
+                    />
+                  </InteractionWrapper>
                 </li>
               ))
             }
@@ -132,14 +154,14 @@ const yearsOfExperience = Math.ceil(
 
     <script>
       import sal from "sal.js";
-      import 'sal.js/dist/sal.css';
+      import "sal.js/dist/sal.css";
 
       import handleScroll from "../javascript/handleScroll.js";
 
       handleScroll();
       sal({
         root: null,
-        once: true
+        once: true,
       });
     </script>
   </body>

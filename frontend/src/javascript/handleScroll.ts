@@ -4,10 +4,10 @@ export default function handleScroll() {
 
   const observer: IntersectionObserver = new IntersectionObserver(
     ([entry]: IntersectionObserverEntry[]) => {
-      if (entry.isIntersecting) {
-        body?.classList.add("hero-in-view");
+      if (!entry.isIntersecting) {
+        body?.classList.add("hero-not-in-view");
       } else {
-        body?.classList.remove("hero-in-view");
+        body?.classList.remove("hero-not-in-view");
       }
     },
     {

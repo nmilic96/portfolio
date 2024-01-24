@@ -255,7 +255,7 @@ section {
 	align-items: center;
 
 	@media screen and (max-width: 640px) {
-		position: static;
+		position: fixed;
 		height: auto;
 		width: 100%;
 		padding-top: calc(80/1024*100vh);
@@ -264,11 +264,10 @@ section {
 
 .static-head {
 	transition: all 0.3s ease-in-out;
-	transform: scale(0);
 }
 
-.hero-in-view {
+.hero-not-in-view {
 	.static-head {
-		transform: scale(1);
+		transform: scale(0);
 	}
 }

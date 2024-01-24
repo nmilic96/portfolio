@@ -77,7 +77,7 @@ export const skills: Skill[] = [
 	{
 		name: "Git",
 		icon: "mdi:git",
-		description: "git commit . git push -f"
+		description: "git commit . && git push -f"
 	}
 ]
 

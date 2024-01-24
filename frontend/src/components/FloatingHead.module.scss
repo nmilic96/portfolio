@@ -24,7 +24,6 @@
       padding: 0.625rem;
       width: 6.25rem;
       height: 6.25rem;
-      @apply bg-primary;
     }
   }
 
@@ -37,16 +36,17 @@
     pointer-events: none;
     margin-top: calc(14/1024*100vh);
     font-size: 0.875rem;
+    font-weight: 500;
 
-    @media screen and (max-width: 640px) {
+    @media screen and (max-width: 1024px) {
       position: static;
       padding: 0.625rem 0.75rem;
       border: 1px solid var(--black);
-      background: #FAFAFC;
       text-align: left;
       margin: 0;
       border-radius: 0.5rem;
       font-size: 1rem;
+      @apply bg-gray-100;
     }
   }
 }

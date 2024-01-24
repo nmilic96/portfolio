@@ -95,8 +95,9 @@ const yearsOfExperience = Math.ceil(
             class="section-heading text-4xl lg:text-5xl mb-12 font-semibold"
             data-sal="slide-left"
           >
-            Skilovi <Icon name="lines" class="w-14 text-secondary" />
+            Skillset <Icon name="lines" class="w-14 text-secondary" />
           </h2>
+          <p data-sal="fade" class="max-w-lg">Uglavnom radim na Ruby on Rails i React projektima. Tu obično koristim:</p>
           <ul
             class="grid grid-cols-2 auto-rows-fr gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
           >
@@ -122,7 +123,8 @@ const yearsOfExperience = Math.ceil(
           >
             Projekti <Icon name="lines-3" class="w-14 text-secondary" />
           </h2>
-          <ul class="py-8 grid grid-cols-1 gap-2 projects lg:gap-4">
+          <p data-sal="fade" class="max-w-lg">Ni sam nisam siguran na koliko sam projekata radio, ali je sigurno više od 30, a ovo su neki od njih:</p>
+          <ul class="py-8 grid grid-cols-1 gap-4 projects">
             {
               projects.map(project => (
                 <li data-sal="fade">
@@ -132,7 +134,6 @@ const yearsOfExperience = Math.ceil(
                     text={project.tooltip ? project.tooltip : ""}>
                     <ProjectCard
                       title={project.name}
-                      tooltip={project.tooltip ? project.tooltip : ""}
                       description={project.description}
                       imagePath={
                         project.image

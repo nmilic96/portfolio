@@ -1,5 +1,5 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION, skills, projects } from "../consts";
+import { SITE_TITLE, SITE_DESCRIPTION, skills, projects, socials } from "../consts";
 import { Icon } from "astro-icon/components";
 import FloatingHead from "../components/FloatingHead.tsx";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
@@ -8,6 +8,7 @@ import ProjectCard from "../components/ProjectCard.astro";
 import head from "../assets/images/glava.png";
 import { Image } from "astro:assets";
 import ApplicationLayout from "../layouts/ApplicationLayout.astro";
+import city from "../assets/images/city.svg";
 
 // get years from may 2018 to now (rounded up)
 const yearsOfExperience = Math.ceil(
@@ -51,33 +52,22 @@ const yearsOfExperience = Math.ceil(
               data-sal="slide-left"
               data-sal-delay="500"
             >
-              <p>
-                Frontend developer iz Đakova. {yearsOfExperience} godina iskustva.
-              </p>
+              <p>{SITE_DESCRIPTION}</p>
             </article>
             <ul class="flex flex-wrap gap-4">
-              <li data-sal="slide-up" data-sal-delay="700">
-                <a
-                  class="button"
-                  href="https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name="linkedin" class="w-6 h-6" />
-                  LinkedIn
-                </a>
-              </li>
-              <li data-sal="slide-up" data-sal-delay="900">
-                <a
-                  class="button"
-                  href="https://github.com/nmilic96"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Icon name="github" class="w-6 h-6" />
-                  GitHub
-                </a>
-              </li>
+              {socials.map((item, index) => (
+                <li data-sal="slide-up" data-sal-delay={index * 100 + 500}>
+                  <a
+                    class="button"
+                    href={item.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name={item.icon} class="w-6 h-6" />
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -91,8 +81,8 @@ const yearsOfExperience = Math.ceil(
           Skillset <Icon name="lines" class="w-14 text-secondary" />
         </h2>
         <p data-sal="fade" class="max-w-lg">
-          Uglavnom radim na Ruby on Rails i React projektima. Tu obično
-          koristim:
+          Imam {yearsOfExperience} godina iskustva, u tom vremenu sam stekao razno
+          razna znanja i vještine:
         </p>
         <ul
           class="grid grid-cols-2 auto-rows-fr gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
@@ -147,6 +137,30 @@ const yearsOfExperience = Math.ceil(
           }
         </ul>
       </section>
+
+      <div class="flex items-center justify-between w-full py-4">
+        <p class="text-gray-800 mt-0 mb-0">
+          {new Date().getFullYear()} © Nikola Milić
+        </p>
+
+        <ul class="flex gap-2">
+          <ul class="flex flex-wrap gap-4">
+            {socials.map(item => (
+              <li data-sal="slide-up">
+                <a
+                  class="button is-round"
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon name={item.icon} class="w-6 h-6" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </ul>
+
+      </div>
     </main>
 
     <div></div>

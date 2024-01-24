@@ -67,16 +67,18 @@ const FloatingHead = ({ text }: { text?: string }) => {
   };
 
   return (
-    <button
-      onClick={handleClick}
-      className={`${styles.floatingHead} ${hidden ? styles.isHidden : ""}`}>
-      <img
-        src={head.src}
-        alt="head"
-        className={isShaking ? styles.shake : ""}
-      />
-      {$reaction.length > 0 && <p>{$reaction}</p>}
-    </button>
+    <div className={styles.wrapper}>
+      <button
+        onClick={handleClick}
+        className={`${styles.floatingHead} ${hidden ? styles.isHidden : ""}`}>
+        <img
+          src={head.src}
+          alt="head"
+          className={isShaking ? styles.shake : ""}
+        />
+      </button>
+      {$reaction.length > 0 && <p className={styles.text}>{$reaction}</p>}
+    </div>
   );
 };
 

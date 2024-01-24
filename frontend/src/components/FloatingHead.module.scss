@@ -1,7 +1,11 @@
+.wrapper {
+  @apply flex items-center lg:flex-col w-full text-center gap-2 relative;
+}
+
 .floatingHead {
   transition: all 0.3s ease-in-out;
   position: relative;
-  
+  user-select: none;
 
   @media screen and (max-width: 1024px) {
     display: flex;
@@ -18,7 +22,7 @@
     object-fit: contain;
     user-select: none;
     border-radius: 50%;
-    @apply bg-gray-200 transition-all duration-300 ease-in-out;
+    @apply bg-secondary transition-all duration-300 ease-in-out;
 
     @media screen and (max-width: 1024px) {
       padding: 0.625rem;
@@ -26,28 +30,28 @@
       height: 6.25rem;
     }
   }
+}
 
-  p {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    margin: auto;
-    pointer-events: none;
-    margin-top: calc(14/1024*100vh);
-    font-size: 0.875rem;
-    font-weight: 500;
+.text {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  pointer-events: none;
+  margin-top: calc(14/1024*100vh);
+  font-size: 0.875rem;
+  font-weight: 500;
 
-    @media screen and (max-width: 1024px) {
-      position: static;
-      padding: 0.625rem 0.75rem;
-      border: 1px solid var(--black);
-      text-align: left;
-      margin: 0;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      @apply bg-gray-100;
-    }
+  @media screen and (max-width: 1024px) {
+    position: static;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--black);
+    text-align: left;
+    margin: 0;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    @apply bg-gray-100;
   }
 }
 

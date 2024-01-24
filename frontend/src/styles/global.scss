@@ -87,10 +87,6 @@ p {
 	margin-bottom: 1em;
 }
 
-.prose p {
-	margin-bottom: 2em;
-}
-
 textarea {
 	width: 100%;
 	font-size: 16px;
@@ -212,6 +208,13 @@ section {
 		@apply text-sm;
 	}
 
+	&.is-round {
+		width: auto;
+		height: auto;
+		padding: 0.625rem;
+		border-radius: 50%;
+	}
+
 	&:hover {
 		border-color: var(--secondary);
 		color: var(--primary);
@@ -220,15 +223,20 @@ section {
 }
 
 .page-container {
+	position: relative;
 	display: grid;
-	grid-template-columns: 200px auto 200px;
+	grid-template-columns: 18.75rem auto 18.75rem;
 	justify-content: center;
 	gap: calc(64/1440*100vw);
 	padding: 0 1.5rem;
 	padding-bottom: 6.25rem;
 
+	@media screen and (max-width: 1536px) {
+		grid-template-columns: 12.25rem auto 12.25rem;
+	}
+
 	@media screen and (max-width: 1280px) {
-		grid-template-columns: 150px auto 150px;
+		grid-template-columns: 9.375rem auto 9.375rem;
 	}
 
 	@media screen and (max-width: 1024px) {
@@ -267,7 +275,7 @@ section {
 	margin-top: 100vh;
 	left: 0;
 	top: 0;
-	justify-content: center;
+	justify-content: flex-start;
 	align-items: flex-start;
 
 	padding-top: calc(80/1024*100vh);

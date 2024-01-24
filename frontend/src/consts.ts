@@ -37,7 +37,7 @@ export const skills: Skill[] = [
 	{
 		name: "React Native",
 		icon: "mdi:react",
-		description: "Odradio sam par aplikacija u React nativeu"
+		description: "Odradio sam par aplikacija u React Nativeu"
 	},
 	{
 		name: "Astro",
@@ -62,12 +62,12 @@ export const skills: Skill[] = [
 	{
 		name: "Sass",
 		icon: "mdi:sass",
-		description: "Obožavam CSS još više kad je SASS"
+		description: "Za još bolji CSS"
 	},
 	{
 		name: "Tailwind CSS",
 		icon: "mdi:tailwind",
-		description: "Tailwind mi je najbolji kad želim nešto stilizirati na brzinu"
+		description: "Dobro dođe za brzinska stiliziranja"
 	},
 	{
 		name: "Shopify",
@@ -183,4 +183,15 @@ export const reactions: string[] = [
   "Aj još jednom",
 ];
 
-
+export const socials: { name: string; icon: string; url: string }[] = [
+	{
+		name: "Linkedin",
+		icon: "mdi:linkedin",
+		url: "https://www.linkedin.com/in/nikola-mili%C4%87-9736a6167/"
+	},
+	{
+		name: "Github",
+		icon: "mdi:github",
+		url: "https://github.com/nmilic96"
+	}
+]

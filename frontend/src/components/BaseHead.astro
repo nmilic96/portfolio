@@ -12,17 +12,16 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-
 const { title, description, image = `${BASE_URL}/seo.jpg` } = Astro.props;
-
-console.log(Astro.url)
-
 ---
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link rel="icon" type="image/svg+xml" href={`${BASE_URL}/favicon.svg`} />
 <meta name="generator" content={Astro.generator} />
+
+<link rel="preconnect" href="https://fonts.gstatic.com/">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />

@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from "react";
-import head from "../assets/images/glava.png";
+import React, { useEffect, useState } from "react";
+import head from "../assets/images/head.png";
 import styles from "./FloatingHead.module.scss";
 import { reactions } from "..//consts";
 import { useStore } from "@nanostores/react";

@@ -1,5 +1,11 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION, skills, projects, socials } from "../consts";
+import {
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+  skills,
+  projects,
+  socials,
+} from "../consts";
 import { Icon } from "astro-icon/components";
 import FloatingHead from "../components/FloatingHead.tsx";
 import InteractionWrapper from "../components/InteractionWrapper.tsx";
@@ -55,19 +61,20 @@ const yearsOfExperience = Math.ceil(
               <p>{SITE_DESCRIPTION}</p>
             </article>
             <ul class="flex flex-wrap gap-4">
-              {socials.map((item, index) => (
-                <li data-sal="slide-up" data-sal-delay={index * 100 + 500}>
-                  <a
-                    class="button"
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Icon name={item.icon} class="w-6 h-6" />
-                    {item.name}
-                  </a>
-                </li>
-              ))}
+              {
+                socials.map((item, index) => (
+                  <li data-sal="slide-up" data-sal-delay={index * 100 + 500}>
+                    <a
+                      class="button"
+                      href={item.url}
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <Icon name={item.icon} class="w-6 h-6" />
+                      {item.name}
+                    </a>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>
@@ -143,23 +150,22 @@ const yearsOfExperience = Math.ceil(
           {new Date().getFullYear()} © Nikola Milić
         </p>
 
-        <ul class="flex gap-2">
-          <ul class="flex flex-wrap gap-4">
-            {socials.map(item => (
+        <ul class="flex flex-wrap gap-4">
+          {
+            socials.map(item => (
               <li data-sal="slide-up">
                 <a
                   class="button is-round"
                   href={item.url}
                   target="_blank"
-                  rel="noopener noreferrer"
-                >
+                  rel="noopener noreferrer">
                   <Icon name={item.icon} class="w-6 h-6" />
                 </a>
               </li>
-            ))}
-          </ul>
+            ))
+          }
         </ul>
-
+        
       </div>
     </main>
 

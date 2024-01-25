@@ -18,6 +18,8 @@ interface Project {
 export const SITE_TITLE: string = 'Nikola Milić';
 export const SITE_DESCRIPTION: string = 'Frontend web developer iz Đakova.';
 
+export const BASE_URL = import.meta.env.BASE_URL;
+
 export const skills: Skill[] = [
 	{
 		name: "Javascript",

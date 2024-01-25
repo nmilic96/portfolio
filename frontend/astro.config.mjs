@@ -8,8 +8,8 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://nmilic96.github.io/portfolio',
-  publicDir: './public',
+  site: 'https://nmilic96.github.io',
+  base: '/portfolio',
   buildOptions: {
     out: './dist',  // output directory
   },

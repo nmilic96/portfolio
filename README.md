@@ -1,6 +1,6 @@
 # Portfolio Website
 
-This is a portfolio website built with [Astro](https://astro.build/). It's using a combination of static Astro components and React components.
+This is a portfolio website built with [Astro](https://astro.build/). It's using a combination of Astro and React components.
 
 ## Stack
 

@@ -181,8 +181,8 @@ export const reactions: string[] = [
   "Nemoj molim te",
   "Joj",
   "Uh",
-  "Proklet bio",
   "Aj još jednom",
+	"Prestani kilkati po meni",
 ];
 
 export const socials: { name: string; icon: string; url: string }[] = [

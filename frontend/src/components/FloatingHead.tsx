@@ -12,7 +12,7 @@ const FloatingHead = () => {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    if (clicks > 5) {
+    if (clicks > 30) {
       reaction.set("Aj bok");
       setTimeout(() => {
         reaction.set("");

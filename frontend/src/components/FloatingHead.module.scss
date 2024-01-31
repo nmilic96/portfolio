@@ -79,3 +79,6 @@
   filter: sepia(1) hue-rotate(0deg) saturate(1000%) brightness(90%);
 }
 
+.isHidden {
+  transform: translateX(-100vw);
+}

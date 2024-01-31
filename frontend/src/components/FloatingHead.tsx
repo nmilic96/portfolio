@@ -5,14 +5,14 @@ import { reactions } from "..//consts";
 import { useStore } from "@nanostores/react";
 import { reaction } from "../stores/reactionStore";
 
-const FloatingHead = ({ text }: { text?: string }) => {
+const FloatingHead = () => {
   const $reaction = useStore(reaction);
   const [isShaking, setIsShaking] = useState(false);
   const [clicks, setClicks] = useState(0);
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    if (clicks > 50) {
+    if (clicks > 5) {
       reaction.set("Aj bok");
       setTimeout(() => {
         reaction.set("");
@@ -67,17 +67,17 @@ const FloatingHead = ({ text }: { text?: string }) => {
   };
 
   return (
-    <div className={`head-wrapper ${styles.wrapper} ${hidden ? styles.isHidden : ""}`}>
+    <div className={`${styles.wrapper} ${hidden ? styles.isHidden : ""}`}>
       <button
         onClick={handleClick}
-        className={`${styles.floatingHead}`}>
+        className={`head-button ${styles.floatingHead}`}>
         <img
           src={head.src}
           alt="head"
           className={isShaking ? styles.shake : ""}
         />
       </button>
-      {$reaction.length > 0 && <p className={styles.text}>{$reaction}</p>}
+      {$reaction.length > 0 && <p className={`head-text ${styles.text}`}>{$reaction}</p>}
     </div>
   );
 };

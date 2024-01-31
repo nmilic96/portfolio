@@ -273,7 +273,6 @@ section {
 	padding-top: calc(80/1024*100vh);
 	padding-bottom: calc(80/1024*100vh);
 
-
 	@media screen and (max-width: 1023px) {
 		display: block;
 		position: fixed;
@@ -287,14 +286,16 @@ section {
 		z-index: 1;
 	}
 
-	.head-wrapper {
-		transform: scale(0);
-		transform-origin: center;
+	.head-button, .head-text {
+		transition: all 0.3s ease-in-out;
+	}
 
-		@media screen and (max-width: 1023px) {
-			transform-origin: 10% center;
-			
-		}
+	.head-button {
+		transform: scale(0);
+	}
+
+	.head-text {
+		opacity: 0;
 	}
 }
 
@@ -307,7 +308,11 @@ section {
 		transform: scale(0);
 	}
 
-	.head-container .head-wrapper {
+	.head-button {
 		transform: scale(1);
+	}
+
+	.head-text {
+		opacity: 1;
 	}
 }

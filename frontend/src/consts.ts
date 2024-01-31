@@ -116,7 +116,7 @@ export const projects: Project[] = [
 		name: "Convoworks",
 		url: "https://convoworks.com/",
 		image: "convoworks.jpg",
-		description: "Nisam siguran tbh",
+		description: "Previše toga za opisati",
 		tooltip: "Radio sam par React komponenti za projekt koje su u njega dodane preko NPM-a"
 	},
 	{

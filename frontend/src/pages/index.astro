@@ -84,7 +84,7 @@ const yearsOfExperience = Math.ceil(
           class="section-heading text-4xl lg:text-5xl mb-12 font-semibold"
           data-sal="slide-left"
         >
-          Skillset <Icon name="lines" class="w-14 text-secondary" />
+          Što znam <Icon name="lines" class="w-14 text-secondary" />
         </h2>
         <p data-sal="fade" class="max-w-lg">
           Imam {yearsOfExperience} godina iskustva, u tom vremenu sam stekao razno
@@ -118,7 +118,7 @@ const yearsOfExperience = Math.ceil(
         <p data-sal="fade" class="max-w-lg">
           Odradio sam oko 60 projekata, ovo su neki od njih:
         </p>
-        <ul class="py-8 grid grid-cols-1 gap-4 projects">
+        <ul class="py-8 grid grid-cols-1 gap-3 projects">
           {
             projects.map(project => (
               <li data-sal="fade">
@@ -143,31 +143,8 @@ const yearsOfExperience = Math.ceil(
         </ul>
       </section>
 
-      <div class="flex items-center justify-between w-full py-4">
-        <p class="text-gray-800 mt-0 mb-0">
-          {new Date().getFullYear()} © Nikola Milić
-        </p>
-
-        <ul class="flex flex-wrap gap-4">
-          {
-            socials.map(item => (
-              <li data-sal="slide-up">
-                <a
-                  class="button is-round"
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer">
-                  <Icon name={item.icon} class="w-6 h-6" />
-                </a>
-              </li>
-            ))
-          }
-        </ul>
-
-      </div>
     </main>
 
-    <div></div>
   </div>
 
   <script>

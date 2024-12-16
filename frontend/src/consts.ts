@@ -52,9 +52,9 @@ export const skills: Skill[] = [
 		description: "Znam i nešto malo backenda"
 	},
 	{
-		name: "HTML5",
-		icon: "mdi:language-html5",
-		description: "..."
+		name: "Shopify",
+		icon: "shopify",
+		description: "Shopify teme, aplikacije, sve može"
 	},
 	{
 		name: "CSS3",
@@ -72,11 +72,6 @@ export const skills: Skill[] = [
 		description: "Dobro dođe za brzinska stiliziranja"
 	},
 	{
-		name: "Shopify",
-		icon: "shopify",
-		description: "Shopify teme, aplikacije, sve može"
-	},
-	{
 		name: "Git",
 		icon: "mdi:git",
 		description: "git commit . && git push -f"
@@ -89,70 +84,86 @@ export const projects: Project[] = [
 		url: "https://magnify-co.com/",
 		image: "magnify.jpg",
 		description: "Mystery shopping platforma za ugostitelje bazirane u UAE",
-		tooltip: "Najveći projekt na kojem sam radio. Ima par različitih, dosta složenih dashboarda"
+		tooltip: "Najveći projekt na kojem sam radio"
+	},
+	{
+		name: "Cornbread Hemp",
+		url: "https://www.cornbreadhemp.com/",
+		image: "cornbread_hemp.jpg",
+		description: "Webshop s proizvodima od konoplje",
+		tooltip: "Oni veselije prirode"
+	},
+	{
+		name: "Renaissance capital",
+		url: "https://renaissance.hr/",
+		image: "renaissance.jpg",
+	},
+	{
+		name: "Zdenka",
+		url: "https://zdenka.hr/",
+		image: "zdenka.jpg"
 	},
 	{
 		name: "Novi Informator",
 		url: "https://informator.hr/",
 		image: "informator.jpg",
 		description: "Pravni portal",
-		tooltip: "Jedan od ranijih projekata na kojem sam radio. Radio sam ga u suradnji s drugim frontendašima"
+		tooltip: "Za pravne ljude"
 	},
 	{
 		name: "CIM Repo",
 		url: "https://base58.hr/en/products/cim-repo",
 		image: "cimrepo.jpg",
 		description: "Github za trafo stanice",
-		tooltip: "Moj najdraži React projekt. Uglavnom se u tablicama prikazuju podaci dohvaćeni preko API-ja"
+		tooltip: "Tablice s puno podataka i tako to"
 	},
 	{
 		name: "Hrvatske Ceste",
 		url: "https://hrvatske-ceste.hr/",
 		image: "hrvatske_ceste.jpg",
 		description: "Službeni web portal Hrvatskih Cesta",
-		tooltip: "Nisam baš ponosan kako je ovaj projekt ispao, trenutno radim na redizajnu koji će biti puno bolji"
+		tooltip: "Trenutno radim na novoj verziji weba koja će izaći jednog dana"
 	},
 	{
 		name: "Convoworks",
 		url: "https://convoworks.com/",
 		image: "convoworks.jpg",
 		description: "Previše toga za opisati",
-		tooltip: "Radio sam par React komponenti za projekt koje su u njega dodane preko NPM-a"
+		tooltip: "Radio sam na par komponenti, uglavnom je bilo u pitanju označavanje entiteta u linijama teksta"
 	},
 	{
 		name: "Country Archer",
 		url: "https://www.countryarcher.com/",
 		image: "countryarcher.jpg",
 		description: "Beef jerky webshop",
-		tooltip: "Shopify webshop za kupovinu beef jerkya, ima subscription preko Rechargea"
+		tooltip: "Ima subscription preko Rechargea pa sam također radio custom Recharge dasboard"
 	},
 	{
 		name: "Tržnica Osijek",
 		url: "https://trznicaos.hr/",
 		image: "trznicaos.jpg",
 		description: "Službeni web portal Tržnice Osijek",
-		tooltip: "Jedn od jednostavnijih webova koje sam radio"
+		tooltip: "Jedan klasičan Ruby on Rails web"
 	},
 	{
 		name: "Astrogarden",
 		url: "https://astrogarden.fun/",
 		image: "astrogarden.jpg",
 		description: "Web stranica osječke igraonice",
-		tooltip: "Isto jedan jednostavniji"
+		tooltip: "Ima modul za rezervacije"
 	},
 	{
 		name: "Centar za mir Osijek",
 		url: "https://centar-za-mir.hr/",
 		image: "centarzamir.jpg",
-		description: "Službeni stranica Centra za mir Osijek",
-		tooltip: "...iiii još jedan jednostavni"
+		description: "Službeni stranica Centra za mir Osijek"
 	},
 	{
 		name: "Rezerviraj.me",
 		url: "https://rezerviraj.me/",
 		image: "rezervirajme.jpg",
 		description: "Web stranica za rezervaciju termina u salonima, na sportskim terenima i slično",
-		tooltip: "Jedan od prvih projekata na kojima sam radio"
+		tooltip: "Jedan od ranijih projekata"
 	},
 	{
 		name: "Portanova",
